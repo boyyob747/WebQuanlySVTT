@@ -12,6 +12,7 @@ import { ThongtincanhanComponent } from './thongtincanhan/thongtincanhan.compone
 import { QluserComponent } from './qluser/qluser.component';
 import { ThemuserComponent } from './themuser/themuser.component';
 import { MyDatePickerModule } from 'mydatepicker';
+import { DataTablesModule } from 'angular-datatables';
 @NgModule({
     imports: [
         CommonModule,
@@ -19,7 +20,8 @@ import { MyDatePickerModule } from 'mydatepicker';
         TranslateModule,
         NgbDropdownModule.forRoot(),
         SweetAlert2Module.forRoot(),FormsModule,ReactiveFormsModule,
-        MyDatePickerModule
+        MyDatePickerModule,
+        DataTablesModule
     ],
     declarations: [LayoutComponent, SidebarComponent, HeaderComponent, ThongtincanhanComponent, QluserComponent, ThemuserComponent]
 })
