@@ -1,0 +1,75 @@
+<div>
+<h1>Thống kê tình hình việc làm của sinh viên tốt nghiệp năm 2017</h1>
+<div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Về khu vực làm việc của sinh viên sau tốt nghiệp</div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Khu vực làm việc</th>
+                  <th>Số lượng</th>
+                  <th>Tỉ lệ</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th>3400</th>
+                  <th>100</th>
+                </tr>
+              </tfoot>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Làm việc trong hệ thống hành chỉnh quản lý Nhà nước</td>
+                  <td>1052</td>
+                  <td>30.91</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Làm việc trong hệ thống hành chỉnh quản lý Nhà nước</td>
+                  <td>1052</td>
+                  <td>30.91</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Làm việc trong hệ thống hành chỉnh quản lý Nhà nước</td>
+                  <td>1052</td>
+                  <td>30.91</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Làm việc trong hệ thống hành chỉnh quản lý Nhà nước</td>
+                  <td>1052</td>
+                  <td>30.91</td>
+                </tr>
+               
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+</div>
+<div class="card mb-3">
+    <div class="card-header">
+      <i class="fa fa-bar-chart"></i> Biểu đồ phần tích</div>
+    <div class="card-body">
+      <div class="row">
+        <div style="width:50%; display: inline-block">
+            <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+              </canvas>
+        </div>
+        <div style="width:50%; display: inline-block">
+            <canvas baseChart height="180px" [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+              </canvas>
+        </div>
+      </div>
+      
+    </div>
+    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+  </div>
+</div>

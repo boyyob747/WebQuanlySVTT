@@ -1,0 +1,60 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
+        <div *ngIf="MaChucVu==0" class="list-group">
+            <a [routerLink]="['/trangchu']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                <i class="fa fa-fw fa-area-chart"></i>&nbsp;{{ 'Trang chủ'}}
+            </a>     
+            <a [routerLink]="['/thuchienkhaosat']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                <i class="fa fa-fw fa-industry"></i>&nbsp;{{ 'Thực hiện khảo sát' }}
+            </a>    
+            <a [routerLink]="['/lienhe']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                <i class="fa fa-fw fa-bars"></i>&nbsp;{{ 'Liện hệ' }}
+            </a>   
+        </div>
+        <div *ngIf="MaChucVu==1" class="list-group">
+                <a [routerLink]="['/thongtincanhan']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                    <i class="fa fa-fw fa-address-card"></i>&nbsp;{{ 'Thông tin cá nhân'}}
+                </a>     
+                <div class="nested-menu">
+                        <a class="list-group-item" (click)="addExpandClass('qluser')">
+                            <span><i class="fa fa-users"></i>&nbsp; {{ 'Quản lý User'}}</span>
+                        </a>
+                        <li class="nested" [class.expand]="showMenu === 'qluser'">
+                            <ul class="submenu">
+                                <li>
+                                        <a [routerLink]="['/danhsachuser']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                            &nbsp;{{ 'Danh sách User' }}
+                                        </a>
+                                </li>
+                                <li>
+                                        <a [routerLink]="['/themuser']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                            &nbsp;{{ 'Thêm User' }}
+                                        </a>
+                                </li>
+                            </ul>
+                        </li>
+                </div>
+                <a [routerLink]="['/lienhe']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                    <i class="fa fa-fw fa-industry"></i>&nbsp;{{ 'Quản lý khảo sát' }}
+                </a>   
+                <a [routerLink]="['/lienhe']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                    <i class="fa fa-fw fa-graduation-cap"></i>&nbsp;{{ 'Quản lý sinh viên' }}
+                </a>  
+                <a [routerLink]="['/lienhe']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                    <i class="fa fa-fw fa-university"></i>&nbsp;{{ 'Quản lý trường' }}
+                </a>  
+                <a [routerLink]="['/lienhe']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                    <i class="fa fa-fw fa-puzzle-piece"></i>&nbsp;{{ 'Quản lý ngành' }}
+                </a>  
+                <a [routerLink]="['/lienhe']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                    <i class="fa fa-fw fa-book"></i>&nbsp;{{ 'Báo cáo' }}
+                </a>  
+                <a [routerLink]="['/lienhe']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                    <i class="fa fa-fw fa-compress"></i>&nbsp;{{ 'Quản lý liên hệ' }}
+                </a>  
+                <a [routerLink]="['/lienhe']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                    <i class="fa fa-fw fa-bar-chart"></i>&nbsp;{{ 'Thống kê' }}
+                </a>  
+                
+        </div>
+</nav>
+

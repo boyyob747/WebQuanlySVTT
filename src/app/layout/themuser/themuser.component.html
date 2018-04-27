@@ -1,0 +1,66 @@
+
+<div class="card mb-3">
+    <div class="card-header">Thêm người dùng</div>
+    <div class="card-body">
+        <form (ngSubmit)="onAddUser()" #ngForm="ngForm">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label>Họ và tên (*) : </label>
+                <input [(ngModel)]="name" name="name" required  type="text" class="form-control" placeholder="Họ và tên">
+              </div>
+              <div class="form-group col-md-6">
+                  <label>Giới tính (*) : </label>
+                  <select required [(ngModel)]="GioiTinh" name="GioiTinh"  class="form-control">
+                      <option value="1">Nam</option>
+                      <option value="0">Nữ</option>
+                    </select>
+                </div>           
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label>Username (*) : </label>
+                  <input [(ngModel)]="username" name="username" required type="text" class="form-control" placeholder="Username">
+                </div>
+                <div class="form-group col-md-6">
+                  <label>Ngày sinh (*) : </label>
+                  <my-date-picker name="mydate" [options]="myDatePickerOptions"
+                    [(ngModel)]="NgaySinh" required></my-date-picker>
+                </div>
+              </div>
+              <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label>Chức vụ (*) : </label>
+                    <select required [(ngModel)]="MaChucVu" name="MaChucVu"  class="form-control" id="exampleFormControlSelect1">
+                        <option *ngFor="let chucvu of chucvus" [value]="chucvu.MaCV">{{chucvu.TenCV}}</option>
+                      </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label>Email(*) : </label>
+                    <input [(ngModel)]="email" name="email" required  type="email" class="form-control" placeholder="Email">
+                  </div>
+              </div>
+              <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label>Địa chỉ : </label>
+                    <input [(ngModel)]="DiaChi" name="DiaChi" type="text" class="form-control" placeholder="Địa chỉ">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label>Mặt khâu (*) : </label>
+                    <input [(ngModel)]="password" name="password" required  type="password" class="form-control" placeholder="Mặt khâu">
+                  </div>
+              </div>
+              <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label style="color:red;">Lưu ý : </label>
+                    <label>Mục có dầu (*) là bắt buộc phải nhập/chọn</label>
+                  </div>
+              </div>
+              <div class="pull-right">
+                  <button type="button" class="btn btn-secondary">Quay về</button> 
+                  <button type="button" class="btn btn-warning">Làm mới</button>
+                  <button type="submit" class="btn btn-success">Thêm</button>
+              </div>
+             
+          </form>
+      </div>
+  </div>
